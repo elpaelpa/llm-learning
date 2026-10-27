@@ -17,5 +17,10 @@ tokenizer.train(raw_text, vocab_size=300)
 # Sanity check: encode then decode, the printed text should equal `text`
 text = "It's the last he painted, you know."
 ids = tokenizer.encode(text)
-print(ids)
-print(tokenizer.decode(ids))
+# print(ids)
+# print(tokenizer.decode(ids))
+
+
+N = 100
+print(tokenizer.decode(tokenizer.encode(raw_text[:N])))
+
